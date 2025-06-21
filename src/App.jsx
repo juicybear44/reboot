@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Glitch from './components/Glitch';
 
 import './scss/main.scss';
 
 const App = () => {
   return (
     <>
-      <div>Hello World 3.0</div>
+      <Glitch/>
     </>
   )
 }

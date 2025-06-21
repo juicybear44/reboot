@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../components/glitch.scss";
+import "../scss/glitch.scss";
 
 export default function Glitch() {
     return (
