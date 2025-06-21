@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "Ultra";
+    src:url("../fonts/Ultra.otf") format("opentype")
+}
+
+$primaryColor: black;
+$secondaryColor: white;
+$color: red;
+$steps: 20;
+
+.glitch-container {
+	position:relative;
+	display: inline-block;
+	top:30vh;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.glitch {
+	width:100%;
+    color: $primaryColor;
+    font-size: 13em;
+    font-family: "Rusty Bucket", sans-serif;
+    text-align: center;
+    letter-spacing: 0.01em;
+    transform: scale3d(1,1,1);
+
+
+    &::before,
+    &::after {
+        content: attr(data-text);
+		position: absolute;
+        width:100%;
+        height: 30vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        background: $secondaryColor;
+        color: $primaryColor;
+        clip: rect(0, 900px, 0, 0);
+
+    }
+
+    &::before {
+        left: 7px;
+        text-shadow: 1px 0 green;
+        animation: glitch-effect 3s infinite linear alternate-reverse;
+    }
+
+    &::after {
+        left: 3px;
+        text-shadow: -1px 0 red;
+        animation: glitch-effect 2s infinite linear alternate-reverse;
+    }
+}
+
+.jobTitle {
+    font-size: 4em;
+    position: relative;
+    display: inline-block;
+    top: 75px;
+    font-family: "Ultra";
+}
+
+@keyframes glitch-effect{
+  
+    @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps))}{
+            clip:rect(random(300)+px,9999px,random(300)+px,0);
+        }
+    }
+    
+}
