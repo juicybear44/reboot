@@ -11,7 +11,7 @@ const App = () => {
     <>
       <Navbar />
       <Hero title="This is the Title for the new website" subtitle="And this is the subtitle!"/>
-      <HomeCards />
+      <HomeCards /> 
       <DataListings/>
     </>
   )

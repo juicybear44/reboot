@@ -8,7 +8,7 @@ const HomeCards = () => {
           <Card bg='bg-yellow-100'>
             <h2 className='text-2xl font-bold'>For Developers</h2>
             <p className='mt-2 mb-4'>
-              Browse our React jobs and start your career today
+              Zombie ipsum brains reversus ab cerebellum viral inferno, brein nam rick mend grimes malum cerveau cerebro. 
             </p>
             <a
               to='/jobs'
@@ -20,7 +20,7 @@ const HomeCards = () => {
           <Card bg='bg-indigo-100'>
             <h2 className='text-2xl font-bold'>For Employers</h2>
             <p className='mt-2 mb-4'>
-              List your job to find the perfect developer for the role
+              De braaaiiiins apocalypsi gorger omero prefrontal cortex undead survivor fornix dictum mauris. Hi brains mindless mortuis limbic cortex soulless creaturas optic nerve
             </p>
             <a
               to='/add-job'
