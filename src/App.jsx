@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <Hero title="This is the Title for the new website" subtitle="And this is the subtitle!"/>
+      <Hero title="Welcome to the Den" subtitle="it's not a honeypot"/>
       <HomeCards /> 
       <DataListings/>
     </>
