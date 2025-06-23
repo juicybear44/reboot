@@ -1,5 +1,6 @@
 import React from 'react'
 import Clock from './Clock'
+import Carousel from './Carousel'
 
 const Hero = ({title='hello', subtitle='world'}) => {
   return (
