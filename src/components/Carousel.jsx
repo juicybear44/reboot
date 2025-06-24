@@ -3,7 +3,11 @@ import { FaChevronRight } from "react-icons/fa6";
 import { useState } from "react";
 
 
-const Carousel = ({children: slides}) => {
+const Carousel = ({
+    children: slides,
+    // autoSlide = false,
+    // autoSlideDuration = 3000
+}) => {
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const prevSlide = () => setCurrentIndex((currentIndex) => (currentIndex === 0 ? slides.length -1 : currentIndex - 1));
@@ -26,9 +30,12 @@ const Carousel = ({children: slides}) => {
                     <FaChevronRight size={30}/>
                 </button>
             </div>
-            <div className="relative py-4 flex justify-center gap-10 w-full">
-                <div className="rounded-full w-5 h-5 bg-black">
-                </div>
+            <div className='relative'>
+                <div className="flex items-center justify-center ">
+                    {slides.map((_, i )=>(
+                        <div className={`transition-all w-3 h-3 bg-black rounded-full ${currentIndex === i ? "p=4" : "bg-opacity-50"}`}/>
+                    ))}
+                </div>  
             </div>
         </section>
     )
