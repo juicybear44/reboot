@@ -1,18 +1,26 @@
 import { FaChevronLeft } from "react-icons/fa6";
 import { FaChevronRight } from "react-icons/fa6";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 const Carousel = ({
     children: slides,
-    // autoSlide = false,
-    // autoSlideDuration = 3000
+    autoSlide = false,
+    autoSlideDuration = 3000
 }) => {
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const prevSlide = () => setCurrentIndex((currentIndex) => (currentIndex === 0 ? slides.length -1 : currentIndex - 1));
     
-    const nextSlide = () => setCurrentIndex((currentIndex) => (currentIndex === 0 ? slides.length -1 : currentIndex - 1));
+    const nextSlide = () => setCurrentIndex((currentIndex) => (currentIndex === slides.length - 1 ? 0 : currentIndex + 1));
+
+    useEffect(()=>{
+        if (!autoSlide) return;
+        // set interval here
+        const slideInterval = setInterval(nextSlide, autoSlideDuration);
+        // best practice to clear the set inverval
+        return () => clearInterval(slideInterval);
+    })
 
     return (
         <section className='py-4 bg-amber-300 group border-y-2'>
@@ -22,7 +30,7 @@ const Carousel = ({
                     {slides}
                 </div>
             </div>
-            <div className='absolute inset-0 translate-y-[-5%] flex items-center justify-between mx-50'>
+            <div className='absolute inset-0 flex items-center justify-between mx-50'>
                 <button onClick={prevSlide}>
                     <FaChevronLeft size={30}/>
                 </button>
@@ -31,7 +39,7 @@ const Carousel = ({
                 </button>
             </div>
             <div className='relative'>
-                <div className="flex items-center justify-center ">
+                <div className="flex items-center justify-center gap-2">
                     {slides.map((_, i )=>(
                         <div className={`transition-all w-3 h-3 bg-black rounded-full ${currentIndex === i ? "p=4" : "bg-opacity-50"}`}/>
                     ))}

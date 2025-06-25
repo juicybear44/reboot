@@ -31,7 +31,7 @@ const App = () => {
     <>
       <Navbar />
       <Hero title="Welcome to the Den" subtitle="it's not a honeypot"/>
-      <Carousel>
+      <Carousel autoSlide={true} autoSlideDuration={3000}>
         {slides.map((s) => (
           <img src={s.url} className='rounded-2xl'/>
         ))}
