@@ -12,9 +12,9 @@ const HomeCards = () => {
           {/* TODO: Lets loop through these cards and dynamically generate them */}
 
           <Card bg='bg-yellow-50'>
-            <h2 className='text-2xl font-bold'>For Developers</h2>
+            <h2 className='text-2xl font-bold'>Cupcake Ipsum</h2>
             <p className='mt-2 mb-4'>
-              Zombie ipsum brains reversus ab cerebellum viral inferno, brein nam rick mend grimes malum cerveau cerebro. 
+              Pie topping pastry ice cream cheesecake. Cake pie jelly beans marzipan cake soufflé. Chupa chups tiramisu jujubes bonbon tootsie roll. Cupcake jelly beans marzipan sugar plum cake sugar plum. Sesame snaps gummi bears lollipop tiramisu sweet roll jelly-o. Lemon drops cotton candy danish caramels tiramisu topping cupcake jelly halvah.
             </p>
             <a
               to='/jobs'
@@ -24,9 +24,9 @@ const HomeCards = () => {
             </a>
           </Card>
           <Card bg='bg-yellow-50'>
-            <h2 className='text-2xl font-bold'>For Employers</h2>
+            <h2 className='text-2xl font-bold'>Pirate Ipsum</h2>
             <p className='mt-2 mb-4'>
-              De braaaiiiins apocalypsi gorger omero prefrontal cortex undead survivor fornix dictum mauris. Hi brains mindless mortuis limbic cortex soulless creaturas optic nerve
+              Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.
             </p>
             <a
               to='/add-job'
@@ -36,9 +36,9 @@ const HomeCards = () => {
             </a>
           </Card>
           <Card bg='bg-yellow-50'>
-            <h2 className='text-2xl font-bold'>For Employers</h2>
+            <h2 className='text-2xl font-bold'>Tuna Ipsum</h2>
             <p className='mt-2 mb-4'>
-              De braaaiiiins apocalypsi gorger omero prefrontal cortex undead survivor fornix dictum mauris. Hi brains mindless mortuis limbic cortex soulless creaturas optic nerve
+              Atka mackerel basslet, smalltooth sawfish queen parrotfish banjo catfish sleeper shark sea snail northern anchovy carpsucker. Swordfish whale catfish kelpfish starry flounder, darter antenna codlet goldeye bottlenose frogmouth catfish spiny eel.
             </p>
             <a
               to='/add-job'
@@ -48,9 +48,9 @@ const HomeCards = () => {
             </a>
           </Card>
             <Card bg='bg-yellow-50'>
-            <h2 className='text-2xl font-bold'>For Employers</h2>
+            <h2 className='text-2xl font-bold'>Coffee Ipsum</h2>
             <p className='mt-2 mb-4'>
-              De braaaiiiins apocalypsi gorger omero prefrontal cortex undead survivor fornix dictum mauris. Hi brains mindless mortuis limbic cortex soulless creaturas optic nerve
+              Cream, milk, white, filter organic cinnamon so skinny variety aromatic roast seasonal id white ut foam latte. Seasonal cream robust percolator barista, cinnamon, cup, skinny bar  caffeine est, pumpkin spice latte affogato crema fair trade wings trifecta. Steamed seasonal americano et sugar doppio whipped, sit, froth steamed coffee aroma, frappuccino whipped flavour cappuccino strong arabica aroma, breve skinny coffee sit milk. 
             </p>
             <a
               to='/add-job'
