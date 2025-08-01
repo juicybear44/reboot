@@ -2,15 +2,26 @@ import React from 'react'
 import Clock from './Clock'
 import Carousel from './Carousel'
 
-const Hero = ({title='hello', subtitle='world'}) => {
+
+import campsite from '../assets/images/campsite.png'
+// {title='hello', subtitle='world'}
+
+
+const Hero = () => {
   return (
-    <section className='bg-yellow-50 py-20'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center'>
-        <div className='text-center'>
-          <h1 className='text-4xl font-extrabold text-black sm:text-5xl md:text-6xl'>{title}</h1>
-          <p className='my-4 text-xl text-black'>{subtitle}</p>
+    <section className='h-[300px] w-[2000] bg-yellow-50'>
+      <div className="flex items-center justify-center">
+        <div className='font-bold text-5xl'>
+          Welcome to
         </div>
-      <Clock/>
+        <div 
+          className='h-[300px] w-[300px]'
+          style={{
+            backgroundImage: `url(${campsite})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain'
+          }}></div>
+        <div className='font-bold text-5xl'>the den</div>    
       </div>
     </section>
   )

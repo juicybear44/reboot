@@ -1,12 +1,14 @@
 import React from 'react';
+import {Parallax, ParallaxLayer} from '@react-spring/parallax';
+
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import HomeCards from './components/HomeCards';
 import DataListings from './components/DataListings';
 import Gallery from './components/Gallery';
+import Carousel from './components/Carousel';
 
 import './scss/main.scss';
-import Carousel from './components/Carousel';
 
 const App = () => {
     const slides = [
@@ -29,15 +31,13 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
-      <Hero title="Welcome to the Den" subtitle="it's not a honeypot"/>
+      <Navbar/>
+      <Hero title="Welcome to the Den" subtitle='this is not a honey pot'/>
       <Carousel autoSlide={true} autoSlideDuration={3000}>
-        {slides.map((s) => (
-          <img src={s.url} className='rounded-2xl'/>
+        {slides.map((slide) => (
+          <img src={slide.url} className='rounded-2xl'/>
         ))}
       </Carousel>
-      <HomeCards /> 
-      <DataListings/>
     </>
   )
 }
