@@ -1,43 +1,41 @@
 import React from 'react';
-import {Parallax, ParallaxLayer} from '@react-spring/parallax';
 
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import HomeCards from './components/HomeCards';
 import DataListings from './components/DataListings';
-import Gallery from './components/Gallery';
-import Carousel from './components/Carousel';
+// import Carousel from './components/Carousel';
 
 import './scss/main.scss';
 
-const App = () => {
-    const slides = [
-        {
-            "url":"https://images.unsplash.com/photo-1717967354821-7616d96c6786?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-            "url":"https://images.unsplash.com/photo-1709201759685-459d11d53d93?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-            "url":"https://images.unsplash.com/photo-1657457320630-3f3e25814b06?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-            "url":"https://images.unsplash.com/photo-1742633882713-593c13e90231?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1746973645769-c11eb0a81025?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        }
-    ]
 
+const App = () => {
+  //TODO: fetch data here and pass to components
+  // const slides = [
+  //     {
+  //         "url":"https://images.unsplash.com/photo-1717967354821-7616d96c6786?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  //     },
+  //     {
+  //         "url":"https://images.unsplash.com/photo-1709201759685-459d11d53d93?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  //     },
+  //     {
+  //         "url":"https://images.unsplash.com/photo-1657457320630-3f3e25814b06?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  //     },
+  //     {
+  //         "url":"https://images.unsplash.com/photo-1742633882713-593c13e90231?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  //     },
+  //     {
+  //       "url": "https://images.unsplash.com/photo-1746973645769-c11eb0a81025?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  //     }
+  // ]
   return (
     <>
       <Navbar/>
-      <Hero title="Welcome to the Den" subtitle='this is not a honey pot'/>
-      <Carousel autoSlide={true} autoSlideDuration={3000}>
+      {/* <Carousel autoSlide={true} autoSlideDuration={3000}>
         {slides.map((slide) => (
           <img src={slide.url} className='rounded-2xl'/>
         ))}
-      </Carousel>
+      </Carousel> */}
     </>
   )
 }

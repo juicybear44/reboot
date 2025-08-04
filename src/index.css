@@ -7,9 +7,14 @@
     font-family: "Rusty Bucket";
     src:url("C:\Users\write\Projects\reboot\src\assets\fonts\RustyBucket-Regular.ttf") format("truetype")
 }
+@font-face {
+    font-family: "Croissant";
+    src:url("C:\Users\write\Projects\reboot\src\assets\fonts\CroissantOne-Regular.ttf") format("truetype")
+}
 @import "tailwindcss";
 
 @theme {  
     --font-rusty: "Rusty Bucket";
     --font-pixel: Pixel;
+    --font-croissant: Croissant;
 }
