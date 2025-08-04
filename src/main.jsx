@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css'
 import App from './App.jsx'
+import NotFound from './components/pages/NotFound.jsx'
 
 const router = createBrowserRouter(
   [
@@ -24,7 +25,7 @@ const router = createBrowserRouter(
     },
     {
       path: "*",
-      element: <h1 className='flex justify-center text-4xl items-center h-screen'>404 Not found yo</h1>
+      element: <NotFound/>
     },
   ]
 );
