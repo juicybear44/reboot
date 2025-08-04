@@ -22,6 +22,10 @@ const router = createBrowserRouter(
       path: "/playground",
       element: <div>This is the Playground Page</div>
     },
+    {
+      path: "*",
+      element: <h1 className='flex justify-center text-4xl items-center h-screen'>404 Not found yo</h1>
+    },
   ]
 );
 
