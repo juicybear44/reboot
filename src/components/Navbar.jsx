@@ -11,8 +11,8 @@ const Navbar = () => {
           <div className='flex flex-1 items-center justify-center md:items-stretch md:justify-start'>
             <img className='h-12' src={logo}
             />
-            <span className='hidden md:block text-black font-bold text-4xl ml-5 font-rusty'>
-              Juicybear's Den
+            <span className='hidden md:block text-black font-bold text-4xl ml-5 font-croissant'>
+              JB's Den
             </span>
             <div className='md:ml-auto'>
               <div className='flex space-x-2'>
