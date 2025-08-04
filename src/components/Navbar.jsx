@@ -1,6 +1,7 @@
 import React from 'react'
 
 import logo from '../assets/images/mapbear.png'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -15,24 +16,24 @@ const Navbar = () => {
             </span>
             <div className='md:ml-auto'>
               <div className='flex space-x-2'>
-                <a 
-                  href="/about.html"
+                <Link 
+                  to={"/projects"}
                   className='text-black hover:bg-gray-900 hover:text-yellow-400 rounded-md px-3 py-2'
                 >
                   projects
-                </a>
-                <a 
-                  href="/about.html"
+                </Link>
+                <Link 
+                  to={"/playground"}
                   className='text-black hover:bg-gray-900 hover:text-yellow-400 rounded-md px-3 py-2'
                 >
-                  playground
-                </a>
-                <a 
-                  href="/about.html"
+                  projects
+                </Link>
+                <Link 
+                  to={"/test"}
                   className='text-black hover:bg-gray-900 hover:text-yellow-400 rounded-md px-3 py-2'
                 >
-                  about
-                </a>
+                  test
+                </Link>
               </div>
             </div>
           </div>
