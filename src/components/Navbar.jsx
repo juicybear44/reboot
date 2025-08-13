@@ -41,7 +41,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <Hero/>
       <Outlet/>
     </>
   )

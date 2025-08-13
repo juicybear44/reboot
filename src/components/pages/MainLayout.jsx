@@ -2,10 +2,12 @@ import React from 'react';
 
 import NavBar from '../Navbar';
 
-export const MainLayout = () => {
+const MainLayout = () => {
   return (
     <>
       <NavBar/>
     </>
   )
-}
+};
+
+export default MainLayout;
