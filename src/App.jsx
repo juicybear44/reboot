@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Hero from './components/Hero';
+// import Hero from './components/Hero';
 import Navbar from './components/Navbar';
-import HomeCards from './components/HomeCards';
-import DataListings from './components/DataListings';
+// import HomeCards from './components/HomeCards';
+// import DataListings from './components/DataListings';
 // import Carousel from './components/Carousel';
 
 import './scss/main.scss';
