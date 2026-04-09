@@ -38,7 +38,7 @@ const Navbar = () => {
                     to={"/about-swag"}
                     className='text-blue-400 hover:bg-blue-400 hover:text-blue-900 py-2'
                   >
-                    Swag Inventory
+                    Swag Tracker
                   </Link>
                 </div>
               </div>

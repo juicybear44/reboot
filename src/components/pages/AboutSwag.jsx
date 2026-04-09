@@ -186,7 +186,7 @@ export default function SwagInventoryAbout() {
             marginBottom: 12,
           }}
         >
-          Swag Inventory
+          Swag Tracker
         </h1>{" "}
         <p
           style={{
