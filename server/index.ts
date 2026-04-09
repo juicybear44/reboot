@@ -30,6 +30,23 @@ app.post('/api/recipe', async (req, res) => {
   }
 });
 
+app.post('/api/swag', async (req, res) => {
+  try {
+    const { messages } = req.body;
+
+    const response = await client.messages.create({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 1000,
+      messages,
+    });
+
+    res.json(response);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Something went wrong' });
+  }
+});
+
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

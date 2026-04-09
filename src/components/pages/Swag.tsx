@@ -170,11 +170,10 @@ export default function SwagInventory() {
     if (!photoBase64) return;
     setAiLoading(true); setAiError(null);
     try {
-      const res = await fetch("https://api.anthropic.com/v1/messages", {
+      const res = await fetch("/api/swag", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          model: "claude-sonnet-4-20250514", max_tokens: 1000,
           messages: [{ role: "user", content: [
             { type: "image", source: { type: "base64", media_type: "image/jpeg", data: photoBase64 } },
             { type: "text", text: `Identify company swag items in this image. Respond ONLY with valid JSON (no markdown):\n{"items":[{"name":"Item","variant":"Size or One Size","quantity":5,"emoji":"👕"}]}\nUse fitting emoji from: 👕🧥🧢🍶👜📓🖊️🎒🧦🏆. If none found return {"items":[]}.` }
