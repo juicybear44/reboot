@@ -40,6 +40,7 @@ export default function SwagInventory() {
   const [form, setForm] = useState<FormState>({ name: "", variant: "", quantity: "", emoji: "👕" });
   const [editId, setEditId] = useState<number | null>(null);
   const [flash, setFlash] = useState<string | null>(null);
+  const [formErrors, setFormErrors] = useState<{ name?: string; variant?: string; quantity?: string }>({});
   const [ingestTab, setIngestTab] = useState("csv");
   const [pasteText, setPasteText] = useState("");
   const [photoPreview, setPhotoPreview] = useState<string | null>(null);
@@ -70,10 +71,12 @@ export default function SwagInventory() {
   });
 
   const saveItem = async () => {
-    if (!form.name.trim() && !form.variant.trim() && form.quantity === "") { showFlash("⚠️ Please fill in all fields."); return; }
-    if (!form.name.trim()) { showFlash("⚠️ Item name is required."); return; }
-    if (!form.variant.trim()) { showFlash("⚠️ Variant is required."); return; }
-    if (form.quantity === "") { showFlash("⚠️ Quantity is required."); return; }
+    const errors: { name?: string; variant?: string; quantity?: string } = {};
+    if (!form.name.trim()) errors.name = "Item name is required.";
+    if (!form.variant.trim()) errors.variant = "Variant is required.";
+    if (form.quantity === "") errors.quantity = "Quantity is required.";
+    if (Object.keys(errors).length) { setFormErrors(errors); return; }
+    setFormErrors({});
     const body = { name: form.name, variant: form.variant, quantity: parseInt(form.quantity), emoji: form.emoji };
     try {
       if (editId) {
@@ -91,6 +94,7 @@ export default function SwagInventory() {
       }
     } catch { showFlash("❌ Failed to save item"); }
     setForm({ name: "", variant: "", quantity: "", emoji: "👕" });
+    setFormErrors({});
     setEditId(null);
     setView("inventory");
   };
@@ -239,14 +243,23 @@ export default function SwagInventory() {
         <div style={{ border: "1.5px solid #e5e7eb", borderRadius: 12, padding: 16, marginBottom: 20, background: "#fafafa" }}>
           <h3 style={{ margin: "0 0 14px", fontSize: 15, fontWeight: 600 }}>{editId ? "✏️ Edit Item" : "➕ Add New Item"}</h3>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 10 }}>
-            <div><label style={{ fontSize: 12, color: "#555", fontWeight: 500 }}>Item Name</label>
-              <input value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))} placeholder="e.g. T-Shirt" style={{ width: "100%", boxSizing: "border-box", marginTop: 4, padding: "8px 10px", border: "1.5px solid #e5e7eb", borderRadius: 8, fontSize: 14, outline: "none" }} /></div>
-            <div><label style={{ fontSize: 12, color: "#555", fontWeight: 500 }}>Size / Variant</label>
-              <input value={form.variant} onChange={e => setForm(f => ({ ...f, variant: e.target.value }))} placeholder="e.g. Medium" style={{ width: "100%", boxSizing: "border-box", marginTop: 4, padding: "8px 10px", border: "1.5px solid #e5e7eb", borderRadius: 8, fontSize: 14, outline: "none" }} /></div>
+            <div>
+              <label style={{ fontSize: 12, color: formErrors.name ? "#ef4444" : "#555", fontWeight: 500 }}>Item Name</label>
+              <input value={form.name} onChange={e => { setForm(f => ({ ...f, name: e.target.value })); setFormErrors(fe => ({ ...fe, name: undefined })); }} placeholder="e.g. T-Shirt" style={{ width: "100%", boxSizing: "border-box", marginTop: 4, padding: "8px 10px", border: `1.5px solid ${formErrors.name ? "#ef4444" : "#e5e7eb"}`, borderRadius: 8, fontSize: 14, outline: "none" }} />
+              {formErrors.name && <p style={{ margin: "4px 0 0", fontSize: 12, color: "#ef4444" }}>{formErrors.name}</p>}
+            </div>
+            <div>
+              <label style={{ fontSize: 12, color: formErrors.variant ? "#ef4444" : "#555", fontWeight: 500 }}>Size / Variant</label>
+              <input value={form.variant} onChange={e => { setForm(f => ({ ...f, variant: e.target.value })); setFormErrors(fe => ({ ...fe, variant: undefined })); }} placeholder="e.g. Medium" style={{ width: "100%", boxSizing: "border-box", marginTop: 4, padding: "8px 10px", border: `1.5px solid ${formErrors.variant ? "#ef4444" : "#e5e7eb"}`, borderRadius: 8, fontSize: 14, outline: "none" }} />
+              {formErrors.variant && <p style={{ margin: "4px 0 0", fontSize: 12, color: "#ef4444" }}>{formErrors.variant}</p>}
+            </div>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 14 }}>
-            <div><label style={{ fontSize: 12, color: "#555", fontWeight: 500 }}>Quantity</label>
-              <input type="number" min="0" value={form.quantity} onChange={e => setForm(f => ({ ...f, quantity: e.target.value }))} placeholder="0" style={{ width: "100%", boxSizing: "border-box", marginTop: 4, padding: "8px 10px", border: "1.5px solid #e5e7eb", borderRadius: 8, fontSize: 14, outline: "none" }} /></div>
+            <div>
+              <label style={{ fontSize: 12, color: formErrors.quantity ? "#ef4444" : "#555", fontWeight: 500 }}>Quantity</label>
+              <input type="number" min="0" value={form.quantity} onChange={e => { setForm(f => ({ ...f, quantity: e.target.value })); setFormErrors(fe => ({ ...fe, quantity: undefined })); }} placeholder="0" style={{ width: "100%", boxSizing: "border-box", marginTop: 4, padding: "8px 10px", border: `1.5px solid ${formErrors.quantity ? "#ef4444" : "#e5e7eb"}`, borderRadius: 8, fontSize: 14, outline: "none" }} />
+              {formErrors.quantity && <p style={{ margin: "4px 0 0", fontSize: 12, color: "#ef4444" }}>{formErrors.quantity}</p>}
+            </div>
             <div><label style={{ fontSize: 12, color: "#555", fontWeight: 500 }}>Icon</label>
               <div style={{ display: "flex", gap: 5, marginTop: 4, flexWrap: "wrap" }}>
                 {EMOJIS.map(e => <button key={e} onClick={() => setForm(f => ({ ...f, emoji: e }))} style={{ fontSize: 17, padding: "3px 5px", borderRadius: 6, border: "1.5px solid", borderColor: form.emoji === e ? "#6366f1" : "#e5e7eb", background: form.emoji === e ? "#eef2ff" : "white", cursor: "pointer" }}>{e}</button>)}
