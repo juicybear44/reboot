@@ -12,7 +12,7 @@ const Navbar = () => {
             <div className='flex flex-1 items-center justify-center md:items-stretch md:justify-start'>
               <img className='h-12' src={logo}/>
               <Link to={'/'}>
-                <span className='hidden md:block text-blue-400 font-bold text-4xl ml-5 font-croissant'>
+                <span className='hidden md:block text-blue-900 font-bold text-4xl ml-5' style={{ fontFamily: "system-ui, sans-serif" }}>
                 TT Contest
                 </span>
               </Link>
@@ -32,11 +32,11 @@ const Navbar = () => {
                   </Link> */}
                   <Link 
                     to={"/about-recipe"}
-                    className='text-blue-400 hover:bg-blue-400 hover:text-blue-900 rounded-md px-3 py-2'
+                    className='text-blue-900 hover:bg-blue-400 hover:text-blue-900 rounded-md px-3 py-2'
                   >Recipe Remix</Link>
                   <Link 
                     to={"/about-swag"}
-                    className='text-blue-400 hover:bg-blue-400 hover:text-blue-900 py-2'
+                    className='text-blue-900 hover:bg-blue-400 hover:text-blue-900 rounded-md px-3 py-2'
                   >
                     Swag Tracker
                   </Link>
