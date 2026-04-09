@@ -62,6 +62,20 @@ For each recipe respond with ONLY valid JSON (no markdown, no backticks) in this
 Keep recipes genuinely quick & easy (under 30 min) and/or healthy as appropriate. Be creative but practical.`;
   };
 
+  const fetchWithRetry = async (url: string, options: RequestInit, retries = 3, delayMs = 1000): Promise<Response> => {
+    for (let attempt = 0; attempt < retries; attempt++) {
+      try {
+        const res = await fetch(url, options);
+        if (res.ok) return res;
+        if (attempt < retries - 1) await new Promise(r => setTimeout(r, delayMs * (attempt + 1)));
+      } catch (e) {
+        if (attempt === retries - 1) throw e;
+        await new Promise(r => setTimeout(r, delayMs * (attempt + 1)));
+      }
+    }
+    throw new Error("Failed after retries");
+  };
+
   const generate = async () => {
     if (!ingredients.trim() && !imageBase64) {
       setError("Please add some ingredients or upload a photo.");
@@ -78,7 +92,7 @@ Keep recipes genuinely quick & easy (under 30 min) and/or healthy as appropriate
       }
       content.push({ type: "text", text: buildPrompt() });
 
-      const res = await fetch("/api/recipe", {
+      const res = await fetchWithRetry("/api/recipe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -162,9 +176,9 @@ Keep recipes genuinely quick & easy (under 30 min) and/or healthy as appropriate
         {STYLES.map(s => (
           <button key={s} onClick={() => toggleStyle(s)} style={{
             padding: "6px 14px", borderRadius: 20, border: "1.5px solid",
-            borderColor: selectedStyles.includes(s) ? "#22c55e" : "#e5e7eb",
-            background: selectedStyles.includes(s) ? "#f0fdf4" : "white",
-            color: selectedStyles.includes(s) ? "#16a34a" : "#666",
+            borderColor: selectedStyles.includes(s) ? "#00a2e9" : "#e5e7eb",
+            background: selectedStyles.includes(s) ? "#dcf4ff" : "white",
+            color: selectedStyles.includes(s) ? "#00a2e9" : "#666",
             cursor: "pointer", fontSize: 13, fontWeight: 500, transition: "all 0.15s"
           }}>{s}</button>
         ))}
@@ -172,7 +186,7 @@ Keep recipes genuinely quick & easy (under 30 min) and/or healthy as appropriate
 
       <button onClick={generate} disabled={loading} style={{
         width: "100%", padding: "13px", borderRadius: 10, border: "none",
-        background: loading ? "#d1d5db" : "linear-gradient(135deg, #22c55e, #16a34a)",
+        background: loading ? "#d1d5db" :  "linear-gradient(135deg, #08406f, #0a5491, #0d6aad)",
         color: "white", fontSize: 15, fontWeight: 600, cursor: loading ? "not-allowed" : "pointer",
         transition: "all 0.2s", display: "flex", alignItems: "center", justifyContent: "center", gap: 8
       }}>
@@ -198,7 +212,7 @@ Keep recipes genuinely quick & easy (under 30 min) and/or healthy as appropriate
                 border: "1.5px solid #e5e7eb", borderRadius: 12, overflow: "hidden",
                 boxShadow: "0 1px 4px rgba(0,0,0,0.06)"
               }}>
-                <div style={{ background: "linear-gradient(135deg, #f0fdf4, #dcfce7)", padding: "14px 16px" }}>
+                <div style={{ background: "#dcf4ff", padding: "14px 16px" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                     <h3 style={{ margin: 0, fontSize: 16, fontWeight: 700 }}>{r.name}</h3>
                     <div style={{ display: "flex", gap: 8, fontSize: 13, color: "#555", whiteSpace: "nowrap" }}>

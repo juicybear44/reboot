@@ -39,7 +39,7 @@ const Hero = () => {
           }}></div>
       </div>
       <div 
-        className="h-[100px] w-screen bg-green-400 absolute top-90 z-10 border-y-2"
+        className="h-[100px] w-screen bg-blue-300 absolute top-90 z-10"
       ></div>
     </section>
   )
