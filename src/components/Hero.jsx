@@ -14,7 +14,7 @@ const Hero = () => {
   };
 
   return (
-    <section className='h-[400px] w-screen bg-yellow-50'>
+    <section className='h-[400px] w-screen bg-white-50'>
       <div className="flex items-center justify-center">
         <motion.div
           animate={{
@@ -39,7 +39,7 @@ const Hero = () => {
           }}></div>
       </div>
       <div 
-        className="h-[100px] w-screen bg-yellow-400 absolute top-90 z-10 border-y-2"
+        className="h-[100px] w-screen bg-green-400 absolute top-90 z-10 border-y-2"
       ></div>
     </section>
   )

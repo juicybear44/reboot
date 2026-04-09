@@ -6,7 +6,7 @@ import { Outlet, Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <>
-      <nav className='bg-yellow-400 border-b-2 border-grey-500'>
+      <nav className='bg-green-500 border-b-2 border-grey-500'>
         <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
           <div className='flex h-20 items-center justify-between'>
             <div className='flex flex-1 items-center justify-center md:items-stretch md:justify-start'>
@@ -20,26 +20,26 @@ const Navbar = () => {
                 <div className='flex space-x-2'>
                   <Link 
                     to="/recipe"
-                    className='text-black hover:bg-gray-900 hover:text-yellow-400 rounded-md px-3 py-2'
+                    className='text-black hover:bg-gray-900 hover:text-green-400 rounded-md px-3 py-2'
                   >
                     Recipe Remix
                   </Link>
-                  <Link 
-                    to={"/playground"}
+                  {/* <Link 
+                    to={"/projects"}
                     className='text-black hover:bg-gray-900 hover:text-yellow-400 rounded-md px-3 py-2'
                   >
-                    projects
-                  </Link>
-                  <Link 
+                    Projects
+                  </Link> */}
+                  {/* <Link 
                     to={"/about"}
-                    className='text-black hover:bg-gray-900 hover:text-yellow-400 rounded-md px-3 py-2'
-                  >about</Link>
-                  <Link 
+                    className='text-black hover:bg-gray-900 hover:text-green-400 rounded-md px-3 py-2'
+                  >about</Link> */}
+                  {/* <Link 
                     to={"/test"}
                     className='text-black hover:bg-gray-900 hover:text-yellow-400 rounded-md px-3 py-2'
                   >
                     404 test
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
