@@ -70,7 +70,10 @@ export default function SwagInventory() {
   });
 
   const saveItem = async () => {
-    if (!form.name.trim() || !form.variant.trim() || form.quantity === "") return;
+    if (!form.name.trim() && !form.variant.trim() && form.quantity === "") { showFlash("⚠️ Please fill in all fields."); return; }
+    if (!form.name.trim()) { showFlash("⚠️ Item name is required."); return; }
+    if (!form.variant.trim()) { showFlash("⚠️ Variant is required."); return; }
+    if (form.quantity === "") { showFlash("⚠️ Quantity is required."); return; }
     const body = { name: form.name, variant: form.variant, quantity: parseInt(form.quantity), emoji: form.emoji };
     try {
       if (editId) {
