@@ -177,7 +177,7 @@ export default function SwagInventoryAbout() {
       {/* Hero */}{" "}
       <div style={s.hero}>
         {" "}
-        <div style={{ display: "flex", justifyContent: "center", marginBottom: 16 }}><img src={logo} alt="TT Logo" style={{ width: 72, height: 72, objectFit: "contain" }} /></div>{" "}
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: 16 }}><img src={logo} alt="TT Logo" style={{ width: 150, height: 150, objectFit: "contain", borderRadius: 20 }} /></div>{" "}
         <h1
           style={{
             fontSize: 42,

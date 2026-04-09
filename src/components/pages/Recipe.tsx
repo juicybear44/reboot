@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import recipeLogo from "../../assets/images/recipe remix.jpg";
 
 const STYLES = ["Quick & easy", "Healthy", "Comfort food", "International", "High protein", "Low carb", "Vegetarian", "Vegan", "Meal prep", "Budget-friendly"];
 
@@ -126,8 +127,8 @@ Keep recipes genuinely quick & easy (under 30 min) and/or healthy as appropriate
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", maxWidth: 720, margin: "0 auto", padding: "24px 16px", color: "#1a1a1a" }}>
       <style>{`@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`}</style>
-      <div style={{ textAlign: "center", marginBottom: 28 }}>
-        <div style={{ fontSize: 40 }}>🍳</div>
+      <div style={{ textAlign: "center", marginBottom: 28, display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <img src={recipeLogo} alt="Recipe Remix" style={{ width: 150, height: 150, objectFit: "cover", borderRadius: 20, marginBottom: 4 }} />
         <h1 style={{ margin: "8px 0 4px", fontSize: 26, fontWeight: 700 }}>Recipe Remix</h1>
         <p style={{ color: "#666", margin: 0 }}>Tell us what you have — we'll make it delicious</p>
       </div>

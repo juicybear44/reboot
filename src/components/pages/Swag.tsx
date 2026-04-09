@@ -216,7 +216,7 @@ export default function SwagInventory() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", maxWidth: 700, margin: "0 auto", padding: "24px 16px", color: "#1a1a1a" }}>
       <div style={{ textAlign: "center", marginBottom: 20, display: "flex", flexDirection: "column", alignItems: "center" }}>
-        <img src={logo} alt="TT Logo" style={{ width: 72, height: 72, objectFit: "contain", marginBottom: 8 }} />
+        <img src={logo} alt="TT Logo" style={{ width: 150, height: 150, objectFit: "contain", borderRadius: 20, marginBottom: 8 }} />
         <h1 style={{ margin: "6px 0 2px", fontSize: 24, fontWeight: 700 }}>Swag Inventory</h1>
         <p style={{ margin: 0, color: "#666", fontSize: 14 }}>{items.length} items tracked</p>
       </div>

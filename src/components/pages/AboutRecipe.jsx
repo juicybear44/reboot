@@ -1,3 +1,5 @@
+import recipeLogo from "../../assets/images/recipe remix.jpg";
+
 const STYLES = [
   "⚡ Quick & Easy", "🥗 Healthy", "🍲 Comfort Food", "🌍 International",
   "💪 High Protein", "🥦 Low Carb", "🌱 Vegetarian", "🌿 Vegan",
@@ -25,7 +27,7 @@ export default function Aboutme() {
 
       {/* Hero */}
       <div style={{ background: "linear-gradient(135deg, #08406f, #0a5491, #0d6aad)", padding: "64px 24px", textAlign: "center", color: "white" }}>
-        <div style={{ fontSize: 72, marginBottom: 16 }}>🍳</div>
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: 16 }}><img src={recipeLogo} alt="Recipe Remix" style={{ width: 150, height: 150, objectFit: "cover", borderRadius: 20 }} /></div>
         <h1 style={{ fontSize: 42, fontWeight: 800, letterSpacing: -1, marginBottom: 12 }}>Recipe Remix</h1>
         <p style={{ fontSize: 18, opacity: 0.9, maxWidth: 480, margin: "0 auto", lineHeight: 1.6 }}>
           Turn whatever's in your fridge into something delicious — powered by AI.
@@ -94,8 +96,8 @@ export default function Aboutme() {
         <div style={{ background: "linear-gradient(135deg, #08406f, #0a5491, #0d6aad)", borderRadius: 16, padding: "40px 32px", textAlign: "center", color: "white", marginTop: 48 }}>
           <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 10 }}>Ready to remix your ingredients?</h2>
           <p style={{ fontSize: 15, opacity: 0.9, marginBottom: 22 }}>Stop wondering what's for dinner. Let AI do the thinking.</p>
-          <a href="/recipe" style={{ display: "inline-block", background: "white", color: "#08406f", padding: "12px 28px", borderRadius: 10, fontWeight: 700, fontSize: 15, textDecoration: "none" }}>
-            🍳 Try Recipe Remix
+          <a href="/recipe" style={{ display: "inline-flex", alignItems: "center", background: "white", color: "#08406f", padding: "12px 28px", borderRadius: 10, fontWeight: 700, fontSize: 15, textDecoration: "none" }}>
+            <img src={recipeLogo} alt="" style={{ width: 20, height: 20, objectFit: "contain", marginRight: 6, verticalAlign: "middle" }} /> Try Recipe Remix
           </a>
         </div>
       </div>
