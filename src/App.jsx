@@ -1,43 +1,34 @@
 import React from 'react';
+import { 
+  Route, 
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider
+} from 'react-router-dom';
 
-import Hero from './components/Hero';
-import Navbar from './components/Navbar';
-import HomeCards from './components/HomeCards';
-import DataListings from './components/DataListings';
-// import Carousel from './components/Carousel';
 
 import './scss/main.scss';
+import MainLayout from './components/pages/MainLayout';
+import LandingPage from './components/pages/LandingPage';
+import NotFound from './components/pages/NotFound';
+// import Playground from './components/pages/Playground';
+import Projects from './components/pages/Projects';
+import Aboutme from './components/pages/Aboutme';
+import Recipe from './components/pages/Recipe';
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<MainLayout/>}>
+      <Route index element={<LandingPage/>} />
+      <Route path='/recipe' element={<Recipe/>} />
+      <Route path='/projects' element={<Projects/>} />
+      <Route path='/about' element={<Aboutme/>} />
+      <Route path='*' element={<NotFound/>} />
+    </Route>)
+)
 
 const App = () => {
-  //TODO: fetch data here and pass to components
-  // const slides = [
-  //     {
-  //         "url":"https://images.unsplash.com/photo-1717967354821-7616d96c6786?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  //     },
-  //     {
-  //         "url":"https://images.unsplash.com/photo-1709201759685-459d11d53d93?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  //     },
-  //     {
-  //         "url":"https://images.unsplash.com/photo-1657457320630-3f3e25814b06?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  //     },
-  //     {
-  //         "url":"https://images.unsplash.com/photo-1742633882713-593c13e90231?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  //     },
-  //     {
-  //       "url": "https://images.unsplash.com/photo-1746973645769-c11eb0a81025?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  //     }
-  // ]
-  return (
-    <>
-      <Navbar/>
-      {/* <Carousel autoSlide={true} autoSlideDuration={3000}>
-        {slides.map((slide) => (
-          <img src={slide.url} className='rounded-2xl'/>
-        ))}
-      </Carousel> */}
-    </>
-  )
+  return <RouterProvider router={router}/>
 }
 
 export default App

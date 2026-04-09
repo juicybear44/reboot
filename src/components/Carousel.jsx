@@ -24,6 +24,25 @@ const Carousel = ({
     return () => clearInterval(slideInterval);
   })
 
+    //TODO: fetch data here and pass to components
+  // const slides = [
+  //     {
+  //         "url":"https://images.unsplash.com/photo-1717967354821-7616d96c6786?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  //     },
+  //     {
+  //         "url":"https://images.unsplash.com/photo-1709201759685-459d11d53d93?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  //     },
+  //     {
+  //         "url":"https://images.unsplash.com/photo-1657457320630-3f3e25814b06?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  //     },
+  //     {
+  //         "url":"https://images.unsplash.com/photo-1742633882713-593c13e90231?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  //     },
+  //     {
+  //       "url": "https://images.unsplash.com/photo-1746973645769-c11eb0a81025?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  //     }
+  // ]
+
   return (
     <>
       <div className=' flex m-auto py-6 overflow-hidden max-w-150'>

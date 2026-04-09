@@ -10,18 +10,19 @@ const Navbar = () => {
         <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
           <div className='flex h-20 items-center justify-between'>
             <div className='flex flex-1 items-center justify-center md:items-stretch md:justify-start'>
-              <img className='h-12' src={logo}
-              />
-              <span className='hidden md:block text-black font-bold text-4xl ml-5 font-croissant'>
-                JB's Den
-              </span>
+              <img className='h-12' src={logo}/>
+              <Link to={'/'}>
+                <span className='hidden md:block text-black font-bold text-4xl ml-5 font-croissant'>
+                  JB's Den
+                </span>
+              </Link>
               <div className='md:ml-auto'>
                 <div className='flex space-x-2'>
                   <Link 
-                    to="/projects"
+                    to="/recipe"
                     className='text-black hover:bg-gray-900 hover:text-yellow-400 rounded-md px-3 py-2'
                   >
-                    projects
+                    Recipe Remix
                   </Link>
                   <Link 
                     to={"/playground"}
@@ -30,10 +31,14 @@ const Navbar = () => {
                     projects
                   </Link>
                   <Link 
+                    to={"/about"}
+                    className='text-black hover:bg-gray-900 hover:text-yellow-400 rounded-md px-3 py-2'
+                  >about</Link>
+                  <Link 
                     to={"/test"}
                     className='text-black hover:bg-gray-900 hover:text-yellow-400 rounded-md px-3 py-2'
                   >
-                    test
+                    404 test
                   </Link>
                 </div>
               </div>
@@ -41,7 +46,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <Hero/>
       <Outlet/>
     </>
   )
