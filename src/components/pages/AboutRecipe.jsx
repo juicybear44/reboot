@@ -86,7 +86,7 @@ export default function Aboutme() {
         <p style={{ fontSize: 16, color: "#555", lineHeight: 1.8, maxWidth: 640 }}>Mix and match styles to find recipes that fit your mood, diet, and schedule.</p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 20 }}>
           {STYLES.map(s => (
-            <span key={s} style={{ padding: "6px 14px", borderRadius: 20, background: "#f0fdf4", border: "1.5px solid #bbf7d0", color: "#00a2e9", fontSize: 13, fontWeight: 500 }}>{s}</span>
+            <span key={s} style={{ padding: "6px 14px", borderRadius: 20, background: "#dcf4ff", border: "1.5px solid #00a2e9", color: "#00a2e9", fontSize: 13, fontWeight: 500 }}>{s}</span>
           ))}
         </div>
 
