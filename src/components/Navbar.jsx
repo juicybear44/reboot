@@ -30,10 +30,10 @@ const Navbar = () => {
                   >
                     Projects
                   </Link> */}
-                  {/* <Link 
-                    to={"/about"}
+                  <Link 
+                    to={"/about-recipe"}
                     className='text-black hover:bg-gray-900 hover:text-green-400 rounded-md px-3 py-2'
-                  >about</Link> */}
+                  >about</Link>
                   {/* <Link 
                     to={"/test"}
                     className='text-black hover:bg-gray-900 hover:text-yellow-400 rounded-md px-3 py-2'
