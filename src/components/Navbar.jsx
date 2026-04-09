@@ -1,29 +1,29 @@
 import React from 'react';
 import Hero from './Hero';
-import logo from '../assets/images/mapbear.png'
+import logo from '../assets/images/ttlogo.png'
 import { Outlet, Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <>
-      <nav className='bg-green-500 border-b-2 border-grey-500'>
+      <nav className='bg-white-500 border-b-2 border-blue-300'>
         <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
           <div className='flex h-20 items-center justify-between'>
             <div className='flex flex-1 items-center justify-center md:items-stretch md:justify-start'>
               <img className='h-12' src={logo}/>
               <Link to={'/'}>
-                <span className='hidden md:block text-black font-bold text-4xl ml-5 font-croissant'>
-                  JB's Den
+                <span className='hidden md:block text-blue-400 font-bold text-4xl ml-5 font-croissant'>
+                TT Contest
                 </span>
               </Link>
               <div className='md:ml-auto'>
                 <div className='flex space-x-2'>
-                  <Link 
+                  {/* <Link 
                     to="/recipe"
-                    className='text-black hover:bg-gray-900 hover:text-green-400 rounded-md px-3 py-2'
+                    className='text-blue-400 hover:bg-blue-400 hover:text-blue-900  rounded-md px-3 py-2'
                   >
                     Recipe Remix
-                  </Link>
+                  </Link> */}
                   {/* <Link 
                     to={"/projects"}
                     className='text-black hover:bg-gray-900 hover:text-yellow-400 rounded-md px-3 py-2'
@@ -32,14 +32,14 @@ const Navbar = () => {
                   </Link> */}
                   <Link 
                     to={"/about-recipe"}
-                    className='text-black hover:bg-gray-900 hover:text-green-400 rounded-md px-3 py-2'
-                  >about</Link>
-                  {/* <Link 
-                    to={"/test"}
-                    className='text-black hover:bg-gray-900 hover:text-yellow-400 rounded-md px-3 py-2'
+                    className='text-blue-400 hover:bg-blue-400 hover:text-blue-900 rounded-md px-3 py-2'
+                  >Recipe Remix</Link>
+                  <Link 
+                    to={"/about-swag"}
+                    className='text-blue-400 hover:bg-blue-400 hover:text-blue-900 py-2'
                   >
-                    404 test
-                  </Link> */}
+                    Swag Inventory
+                  </Link>
                 </div>
               </div>
             </div>

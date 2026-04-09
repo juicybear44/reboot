@@ -38,7 +38,7 @@ export default function Aboutme() {
       <div style={{ maxWidth: 860, margin: "0 auto", padding: "56px 24px" }}>
 
         {/* About */}
-        <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#08406f", marginBottom: 10 }}>About</div>
+        <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#00a2e9", marginBottom: 10 }}>About</div>
         <div style={{ fontSize: 28, fontWeight: 700, marginBottom: 14, color: "#111" }}>Cook smarter, not harder.</div>
         <p style={{ fontSize: 16, color: "#555", lineHeight: 1.8, maxWidth: 640 }}>
           Recipe Remix is an AI-powered cooking assistant that looks at what ingredients you already have and suggests creative, practical recipes tailored to your preferences. No more staring blankly at a full fridge wondering what to make — just snap a photo or type in what you've got, and let the magic happen.
@@ -47,7 +47,7 @@ export default function Aboutme() {
         <hr style={{ border: "none", borderTop: "1px solid #e5e7eb", margin: "48px 0" }} />
 
         {/* Features */}
-        <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#08406f", marginBottom: 10 }}>Features</div>
+        <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#00a2e9", marginBottom: 10 }}>Features</div>
         <div style={{ fontSize: 28, fontWeight: 700, marginBottom: 14, color: "#111" }}>Everything you need to get cooking.</div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20, marginTop: 28 }}>
           {FEATURES.map(f => (
@@ -62,7 +62,7 @@ export default function Aboutme() {
         <hr style={{ border: "none", borderTop: "1px solid #e5e7eb", margin: "48px 0" }} />
 
         {/* How it works */}
-        <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#08406f", marginBottom: 10 }}>How It Works</div>
+        <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#00a2e9", marginBottom: 10 }}>How It Works</div>
         <div style={{ fontSize: 28, fontWeight: 700, marginBottom: 14, color: "#111" }}>Three steps to your next meal.</div>
         <div style={{ display: "flex", flexDirection: "column", gap: 20, marginTop: 28 }}>
           {STEPS.map((step, i) => (
@@ -81,12 +81,12 @@ export default function Aboutme() {
         <hr style={{ border: "none", borderTop: "1px solid #e5e7eb", margin: "48px 0" }} />
 
         {/* Recipe Styles */}
-        <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#22c55e", marginBottom: 10 }}>Recipe Styles</div>
+        <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#00a2e9", marginBottom: 10 }}>Recipe Styles</div>
         <div style={{ fontSize: 28, fontWeight: 700, marginBottom: 14, color: "#111" }}>Cook your way.</div>
         <p style={{ fontSize: 16, color: "#555", lineHeight: 1.8, maxWidth: 640 }}>Mix and match styles to find recipes that fit your mood, diet, and schedule.</p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 20 }}>
           {STYLES.map(s => (
-            <span key={s} style={{ padding: "6px 14px", borderRadius: 20, background: "#f0fdf4", border: "1.5px solid #bbf7d0", color: "#16a34a", fontSize: 13, fontWeight: 500 }}>{s}</span>
+            <span key={s} style={{ padding: "6px 14px", borderRadius: 20, background: "#f0fdf4", border: "1.5px solid #bbf7d0", color: "#00a2e9", fontSize: 13, fontWeight: 500 }}>{s}</span>
           ))}
         </div>
 
