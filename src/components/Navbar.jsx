@@ -19,10 +19,10 @@ const Navbar = () => {
               <div className='md:ml-auto'>
                 <div className='flex space-x-2'>
                   <Link 
-                    to="/projects"
+                    to="/recipe"
                     className='text-black hover:bg-gray-900 hover:text-yellow-400 rounded-md px-3 py-2'
                   >
-                    projects
+                    Recipe Remix
                   </Link>
                   <Link 
                     to={"/playground"}

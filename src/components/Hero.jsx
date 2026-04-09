@@ -17,18 +17,6 @@ const Hero = () => {
     <section className='h-[400px] w-screen bg-yellow-50'>
       <div className="flex items-center justify-center">
         <motion.div
-          className={`text-5xl absolute left-25 bottom-117 font-croissant text-center`}
-          animate={{
-            top: clicked ? 180 : 370,
-            opacity: clicked ? 1 : 0,
-            transition: {duration: 1, ease: 'easeInOut'}
-          }}
-        >
-          Welcome to 
-          <br />
-          the Den
-        </motion.div>
-        <motion.div
           animate={{
             opacity: clicked ? 1 : 0,
             transition: {duration: 0.5}, 
@@ -49,18 +37,6 @@ const Hero = () => {
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'contain'
           }}></div>
-          <motion.div
-            className={`text-5xl absolute right-25 bottom-118 font-croissant text-center`}
-            animate={{
-            top: clicked ? 180 : 370,
-            opacity: clicked ? 1 : 0,
-            transition: {duration: 1, ease: 'easeInOut'}
-          }}
-          >
-            Not a
-            <br />
-            HoneyPot
-          </motion.div>
       </div>
       <div 
         className="h-[100px] w-screen bg-yellow-400 absolute top-90 z-10 border-y-2"
