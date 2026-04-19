@@ -17,7 +17,7 @@ import AboutRecipe from './components/pages/AboutRecipe';
 import AboutSwag from './components/pages/AboutSwag';
 import Recipe from './components/pages/Recipe';
 import Swag from './components/pages/Swag';
-import WorldMap from './components/paGES/WorldMap';
+import WorldMap from './components/pages/WorldMap';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
