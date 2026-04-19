@@ -17,15 +17,16 @@ import AboutRecipe from './components/pages/AboutRecipe';
 import AboutSwag from './components/pages/AboutSwag';
 import Recipe from './components/pages/Recipe';
 import Swag from './components/pages/Swag';
+import WorldMap from './components/paGES/WorldMap';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<MainLayout/>}>
-      <Route index element={<AboutRecipe/>} />
+      <Route index element={<LandingPage/>} />
       <Route path='/recipe' element={<Recipe/>} />
       {/* <Route path='/projects' element={<Projects/>} /> */}
       <Route path='/about-recipe' element={<AboutRecipe/>} />
-      
+      <Route path='/world-map' element={<WorldMap/>} />
       <Route path='/swag' element={<Swag/>} />
       <Route path='/about-swag' element={<AboutSwag/>} />
       <Route path='*' element={<NotFound/>} />
