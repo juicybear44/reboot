@@ -30,13 +30,13 @@ const Navbar = () => {
                   {/* <Link 
                     to={"/about-recipe"}
                     className='text-blue-900 hover:bg-blue-400 hover:text-blue-900 rounded-md px-3 py-2'
-                  >Recipe Remix</Link>
+                  >Recipe Remix</Link> */}
                   <Link 
                     to={"/about-swag"}
                     className='text-blue-900 hover:bg-blue-400 hover:text-blue-900 rounded-md px-3 py-2'
                   >
                     Swag Tracker
-                  </Link> */}
+                  </Link>
                   <Link 
                     to={"/world-map"}
                     className='text-blue-900 hover:bg-yellow-400 hover:text-black rounded-md px-3 py-2'
