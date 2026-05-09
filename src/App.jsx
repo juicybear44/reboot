@@ -18,6 +18,7 @@ import AboutSwag from './components/pages/AboutSwag';
 // import Recipe from './components/pages/Recipe';
 import Swag from './components/pages/SwagInventory';
 import WorldMap from './components/pages/WorldMap';
+import Multiplcation from './components/pages/MultiplicationTables';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,7 +26,7 @@ const router = createBrowserRouter(
       <Route index element={<LandingPage/>} />
       {/* <Route path='/recipe' element={<Recipe/>} /> */}
       {/* <Route path='/projects' element={<Projects/>} /> */}
-      {/* <Route path='/about-recipe' element={<AboutRecipe/>} /> */}
+      <Route path='/multiplication' element={<Multiplcation/>} />
       <Route path='/world-map' element={<WorldMap/>} />
       <Route path='/swag' element={<Swag/>} />
       <Route path='/about-swag' element={<AboutSwag/>} />
