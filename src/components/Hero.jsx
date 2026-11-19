@@ -13,8 +13,9 @@ const Hero = () => {
     setClicked(prevClicked => !prevClicked);
   };
 
+  // Contain the artwork layers so they cannot paint above navbar dropdowns.
   return (
-    <section className='h-[400px] w-screen bg-white-50'>
+    <section className='isolate h-[400px] w-screen bg-white-50'>
       <div className="flex items-center justify-center">
         <motion.div
           animate={{
